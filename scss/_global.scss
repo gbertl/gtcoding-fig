@@ -1,0 +1,31 @@
+:root {
+  --dark-color: #2b2d42;
+  --light-color: #fefefe;
+  --red-color: #d80032;
+  --cyan-color: #41ead4;
+
+  --red-hover-color: #be0732;
+  --cyan-hover-color: #6af3e1;
+
+  --w-container: 923px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--dark-color);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

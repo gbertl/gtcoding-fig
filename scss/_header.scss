@@ -1,0 +1,34 @@
+.header {
+  &__container {
+    background-color: var(--light-color);
+    box-shadow: 0 0.188em 0.688em rgba(0, 0, 0, 0.1);
+    border-radius: 1.5em;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.313em 0 0.313em 1.875em;
+    margin-top: 1.75em;
+
+    position: fixed;
+    z-index: 9999;
+    width: var(--w-container);
+  }
+}
+
+.nav {
+  gap: 2.5em;
+  position: relative;
+
+  &__item--active::after {
+    content: "";
+    background-color: var(--red-color);
+    width: 100%;
+    height: 3px;
+    position: absolute;
+  }
+
+  &__link {
+    font-weight: 500;
+  }
+}
