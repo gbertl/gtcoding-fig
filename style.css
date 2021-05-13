@@ -51,13 +51,10 @@ a {
   width: var(--w-container); }
 
 .nav {
-  gap: 2.5em;
-  position: relative; }
-  .nav__item--active::after {
-    content: "";
-    background-color: var(--red-color);
-    width: 100%;
-    height: 3px;
-    position: absolute; }
+  gap: 2.5em; }
   .nav__link {
-    font-weight: 500; }
+    font-weight: 500;
+    padding-top: 0.875em;
+    padding-bottom: 0.875em; }
+    .nav__link--active {
+      border-bottom: 3px solid var(--red-color); }
