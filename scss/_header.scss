@@ -6,16 +6,17 @@
   padding-left: 1.875em;
 
   position: fixed;
-  top: 1.75em;
+  top: var(--m-nav);
   z-index: 9999;
   width: var(--w-container);
 }
 
 .nav {
   gap: 2.5em;
+  height: var(--h-nav);
 
   &__item--active {
-    height: 2.938rem;
+    height: 100%;
     display: flex;
     align-items: center;
     position: relative;

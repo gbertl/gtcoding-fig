@@ -5,9 +5,13 @@
   --cyan-color: #41ead4;
   --red-hover-color: #be0732;
   --cyan-hover-color: #6af3e1;
-  --w-container: 923px; }
+  --w-container: 923px;
+  --h-nav: 2.938rem;
+  --m-nav: 1.75em; }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
@@ -23,6 +27,9 @@ a {
   text-decoration: none;
   color: inherit; }
 
+h1 {
+  font-size: 2.25rem; }
+
 .container {
   max-width: var(--w-container);
   margin: 0 auto; }
@@ -30,31 +37,66 @@ a {
 .flex {
   display: flex; }
 
-.btn {
-  padding: 0.875em 1.875em;
-  border-radius: 1.5em; }
+.justify-sb {
+  justify-content: space-between; }
 
-.btn-red {
-  background-color: var(--red-color);
-  color: var(--light-color); }
+.align-c {
+  align-items: center; }
+
+.btn {
+  display: inline-block;
+  padding: 0.875em 1.875em;
+  border-radius: 1.5em;
+  background-color: var(--bg-clr);
+  color: var(--text-clr);
+  font-weight: bold; }
+  .btn-red {
+    --bg-clr: var(--red-color);
+    --text-clr: var(--light-color); }
+  .btn-cyan {
+    --bg-clr: var(--cyan-color); }
+
+.text-red {
+  color: var(--red-color); }
 
 .header__container {
   background-color: var(--light-color);
   box-shadow: 0 0.188em 0.688em rgba(0, 0, 0, 0.1);
   border-radius: 1.5em;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.313em 0 0.313em 1.875em;
-  margin-top: 1.75em;
+  padding-left: 1.875em;
   position: fixed;
+  top: var(--m-nav);
   z-index: 9999;
   width: var(--w-container); }
 
 .nav {
-  gap: 2.5em; }
+  gap: 2.5em;
+  height: var(--h-nav); }
+  .nav__item--active {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative; }
+    .nav__item--active::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-bottom: 3px solid var(--red-color);
+      z-index: -1; }
   .nav__link {
-    font-weight: 500;
-    padding-top: 0.875em;
-    padding-bottom: 0.875em; }
-    .nav__link--active {
-      border-bottom: 3px solid var(--red-color); }
+    font-weight: 500; }
+
+.hero {
+  margin-top: calc(var(--h-nav) + var(--m-nav) + 1.875em); }
+  .hero__greeting {
+    font-size: 1.5rem;
+    margin-bottom: 0.375em; }
+  .hero__company {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    margin-bottom: 0.417em; }
+  .hero__get-started {
+    margin-right: 1.25em; }

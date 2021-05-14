@@ -19,9 +19,20 @@
   display: inline-block;
   padding: 0.875em 1.875em;
   border-radius: 1.5em;
+  background-color: var(--bg-clr);
+  color: var(--text-clr);
+  font-weight: bold;
+
+  &-red {
+    --bg-clr: var(--red-color);
+    --text-clr: var(--light-color);
+  }
+
+  &-cyan {
+    --bg-clr: var(--cyan-color);
+  }
 }
 
-.btn-red {
-  background-color: var(--red-color);
-  color: var(--light-color);
+.text-red {
+  color: var(--red-color);
 }
